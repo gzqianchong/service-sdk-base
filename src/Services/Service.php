@@ -97,4 +97,14 @@ class Service
         $this->addBody('organizationId', $organizationId);
         return $this;
     }
+
+    public function isSuccess()
+    {
+        return Arr::get($this->httpJson, 'success');
+    }
+
+    public function getErrorMessage()
+    {
+        return Arr::get($this->httpJson, 'errorMessage');
+    }
 }
