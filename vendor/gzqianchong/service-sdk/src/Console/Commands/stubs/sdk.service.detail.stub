@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Sdk\Services\DetailService;
+
+class {{ class }} extends DetailService
+{
+    protected $path = '{{ pathName }}';{{ requestMethod }}{{ responseMethod }}
+}

@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Sdk\Services\UpdateService;
+
+class {{ class }} extends UpdateService
+{
+    protected $path = '{{ pathName }}';{{ requestMethod }}{{ responseMethod }}
+}

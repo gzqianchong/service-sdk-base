@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Sdk\Services\DeleteService;
+
+class {{ class }} extends DeleteService
+{
+    protected $path = '{{ pathName }}';
+}

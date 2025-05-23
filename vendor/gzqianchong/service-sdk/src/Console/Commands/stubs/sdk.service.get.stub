@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Sdk\Services\GetService;
+
+class {{ class }} extends GetService
+{
+    protected $path = '{{ pathName }}';
+}

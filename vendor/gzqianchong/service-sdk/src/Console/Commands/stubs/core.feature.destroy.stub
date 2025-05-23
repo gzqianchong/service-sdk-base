@@ -1,0 +1,22 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Cores\Features\{{ moduleName }}\{{ moduleName }}Feature;
+use App\Cores\Units\{{ modelName }}\{{ modelName }}DeleteUnit;
+use Exception;
+
+class {{ class }} extends {{ moduleName }}Feature
+{
+    /**
+     * @throws Exception
+     */
+    protected function execute()
+    {
+        $responses = {{ modelName }}DeleteUnit::init()
+            ->setRequestId($this->getRequest('id'))
+            ->run()
+            ->getResponses();
+        $this->success($responses);
+    }
+}

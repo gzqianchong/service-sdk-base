@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Cores\Features\{{ moduleName }}\{{ moduleName }}Feature;
+use App\Models\{{ modelName }};
+
+class {{ class }} extends {{ moduleName }}Feature
+{
+    protected function execute()
+    {
+        $model = {{ modelName }}::query()
+            ->findOrFail($this->getRequest('id'));
+        $this->success($model->toArray());
+    }
+}

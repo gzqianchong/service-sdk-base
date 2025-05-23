@@ -1,0 +1,50 @@
+{
+    "packages": [
+        {
+            "name": "gzqianchong/service-sdk",
+            "version": "2.0.0",
+            "version_normalized": "2.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gzqianchong/service-sdk.git",
+                "reference": "1f9dadc8c2e3b3995da63e0fe3195f68ed21b24c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gzqianchong/service-sdk/zipball/1f9dadc8c2e3b3995da63e0fe3195f68ed21b24c",
+                "reference": "1f9dadc8c2e3b3995da63e0fe3195f68ed21b24c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "time": "2025-05-23T11:27:59+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "App\\Providers\\ServiceSdkServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "App\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "gzqianchong/service-sdk",
+            "support": {
+                "issues": "https://github.com/gzqianchong/service-sdk/issues",
+                "source": "https://github.com/gzqianchong/service-sdk/tree/2.0.0"
+            },
+            "install-path": "../gzqianchong/service-sdk"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

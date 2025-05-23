@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Sdk\Services\CreateService;
+
+class {{ class }} extends CreateService
+{
+    protected $path = '{{ pathName }}';{{ requestMethod }}{{ responseMethod }}
+}

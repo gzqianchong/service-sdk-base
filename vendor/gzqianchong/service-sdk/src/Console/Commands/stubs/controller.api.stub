@@ -1,0 +1,81 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Cores\Features\{{ moduleName }}\{{ modelName }}\{{ modelName }}DestroyFeature;
+use App\Cores\Features\{{ moduleName }}\{{ modelName }}\{{ modelName }}IndexFeature;
+use App\Cores\Features\{{ moduleName }}\{{ modelName }}\{{ modelName }}ShowFeature;
+use App\Cores\Features\{{ moduleName }}\{{ modelName }}\{{ modelName }}StoreFeature;
+use App\Cores\Features\{{ moduleName }}\{{ modelName }}\{{ modelName }}UpdateFeature;
+use Exception;
+use Illuminate\Http\Request;
+
+class {{ class }} extends {{ moduleName }}Controller
+{
+    /**
+     * @param Request $request
+     * @throws Exception
+     */
+    public function index(Request $request)
+    {
+        $responses = {{ modelName }}IndexFeature::init()
+            ->setRequests($request->all())
+            ->run()
+            ->getResponses();
+        $this->responses($responses);
+    }
+
+    /**
+     * @param Request $request
+     * @throws Exception
+     */
+    public function store(Request $request)
+    {
+        $responses = {{ modelName }}StoreFeature::init()
+            ->setRequests($request->all())
+            ->run()
+            ->getResponses();
+        $this->responses($responses);
+    }
+
+    /**
+     * @param $id
+     * @throws Exception
+     */
+    public function show($id)
+    {
+        $responses = {{ modelName }}ShowFeature::init()
+            ->setRequest('id', $id)
+            ->run()
+            ->getResponses();
+        $this->responses($responses);
+    }
+
+    /**
+     * @param Request $request
+     * @param $id
+     * @throws Exception
+     */
+    public function update(Request $request, $id)
+    {
+        $responses = {{ modelName }}UpdateFeature::init()
+            ->setRequest('id', $id)
+            ->setRequests($request->all())
+            ->run()
+            ->getResponses();
+        $this->responses($responses);
+    }
+
+    /**
+     * @param $id
+     * @throws Exception
+     */
+    public function destroy($id)
+    {
+        $responses = {{ modelName }}DestroyFeature::init()
+            ->setRequest('id', $id)
+            ->run()
+            ->getResponses();
+        $this->responses($responses);
+    }
+}

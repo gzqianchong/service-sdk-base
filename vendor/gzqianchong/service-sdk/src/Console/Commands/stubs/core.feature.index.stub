@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Cores\Features\{{ moduleName }}\{{ moduleName }}Feature;
+use App\Models\{{ modelName }};
+
+class {{ class }} extends {{ moduleName }}Feature
+{
+    protected function execute()
+    {
+        $model = {{ modelName }}::query();
+        $this->lists($model);
+    }
+}

@@ -1,0 +1,20 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Cores\Units\Unit;
+use App\Models\{{ modelName }};
+use Illuminate\Support\Arr;
+
+class {{ class }} extends Unit
+{
+    protected function execute()
+    {
+        $model = {{ modelName }}::withTrashed()
+           ->withoutGlobalScopes()
+            ->firstOrNew(Arr::only($this->getRequests(), {{ modelName }}::$uniqueKeys));
+        $model->fill(Arr::whereNotNull($this->getRequests()));
+        $model->save();
+        $this->setResponses($model->toArray());
+    }{{ requestMethod }}{{ responseMethod }}
+}
