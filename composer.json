@@ -1,0 +1,14 @@
+{
+    "name": "gzqianchong/service-sdk-base",
+    "description": "gzqianchong/service-sdk-base",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ServiceSdkBase\\": "src/"
+        }
+    }
+}
